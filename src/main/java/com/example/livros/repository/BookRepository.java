@@ -1,4 +1,5 @@
 package com.example.livros.repository;
 
-public class BookRepository {
+public interface BookRepository extends JpaRepository<Book, Long> {
+    List<Book> findByAuthor(Author author);
 }

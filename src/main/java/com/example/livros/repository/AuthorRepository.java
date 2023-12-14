@@ -1,4 +1,4 @@
 package com.example.livros.repository;
 
-public class AuthorRepository {
+public interface AuthorRepository extends JpaRepository<Author, Long> {
 }
