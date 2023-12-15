@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author Form</title>
+</head>
+<body>
+    <h2>Author Form</h2>
+
+    <form th:action="@{/authors/add}" th:object="${author}" method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" th:field="*{firstName}" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" th:field="*{lastName}" required>
+
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" th:field="*{nationality}" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

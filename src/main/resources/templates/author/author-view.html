@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author View</title>
+</head>
+<body>
+    <h2>Author View</h2>
+
+    <dl>
+        <dt>ID:</dt>
+        <dd th:text="${author.id}"></dd>
+
+        <dt>First Name:</dt>
+        <dd th:text="${author.firstName}"></dd>
+
+        <dt>Last Name:</dt>
+        <dd th:text="${author.lastName}"></dd>
+
+        <dt>Nationality:</dt>
+        <dd th:text="${author.nationality}"></dd>
+    </dl>
+    
+    <a th:href="@{/authors}">Back to Author List</a>
+</body>
+</html>
